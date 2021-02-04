@@ -11,6 +11,7 @@ body {
 
 .header {
   text-align: center;
+  margin: 0 auto;
 }
 
 .header h1 {
@@ -32,7 +33,7 @@ body {
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
-  width: 400px;
+  max-width: 300px;
 }
 
 .panel p {
