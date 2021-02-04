@@ -5,11 +5,11 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
-app.use(express.static('webpage'));
+app.use(express.static('public'));
 
 // Handle GET request of webpage
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + 'webpage/index.html'));
+  res.sendFile(path.join(__dirname + 'public/index.html'));
 });
 
 app.listen(port, () => {

@@ -9,14 +9,13 @@ const client = mqtt.connect(broker_ws);
 
 client.on('connect', () => {
   console.log('Client connected to:', broker_ws);
-  client.subscribe('/test');
+  client.subscribe('test');
 });
 
 client.on('message', (topic, message) => {
-  console.log(`Received from ${topic}: ${message}`);
+  let val = parseFloat(message);
+  console.log('Received from', topic, val);
 
-  let val = message + '%'
-
-  overlay.style.height = val;
+  overlay.style.height = val + '%';
   value.innerHTML = val;
 });

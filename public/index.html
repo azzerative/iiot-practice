@@ -13,18 +13,27 @@
         src="https://upload.wikimedia.org/wikipedia/id/9/95/Logo_Institut_Teknologi_Bandung.png"
         alt="Logo_Institut_Teknologi_Bandung"
       />
+
       <h1>TF4061 Industrial Internet of Things</h1>
       <h2>Semester 2 2020/2021</h2>
     </div>
     <div class="panel">
-      <p>Publish any value between 0-100 at MQTT topic <code>/test</code></p>
+      <p>Publish any value between 0-100 at MQTT topic <code>test</code></p>
+
       <div class="bar">
-        <span id="value">[NA]</span>
+        <span id="value">NaN</span>
         <div id="overlay"></div>
       </div>
+
+      <input type="range" min="0" max="1" step="0.01" value="0.1" id="range1" />
+      <label for="range1">Frekuensi: <span id="range1-value">NaN</span></label>
+      <input type="range" min="0" max="1" step="0.01" value="0.1" id="range2" />
+      <label for="range2">Amplitudo: <span id="range2-value">NaN</span></label>
+      <button id="btn">Kirim</button>
     </div>
 
     <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/hmi-input.js"></script>
   </body>
 </html>
