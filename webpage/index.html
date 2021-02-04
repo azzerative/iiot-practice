@@ -19,9 +19,12 @@
     <div class="panel">
       <p>Publish any value between 0-100 at MQTT topic <code>/test</code></p>
       <div class="bar">
-        <span class="value">[NA]</span>
-        <div class="overlay"></div>
+        <span id="value">[NA]</span>
+        <div id="overlay"></div>
       </div>
     </div>
+
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

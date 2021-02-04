@@ -57,12 +57,12 @@ body {
   line-height: 3rem;
 }
 
-.value {
+#value {
   position: absolute;
   line-height: 300px;
 }
 
-.overlay {
+#overlay {
   background-color: #74add6;
   width: 100%;
 }
