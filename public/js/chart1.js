@@ -66,20 +66,14 @@ const chart1 = new Chart(ctx, graphParams);
 
 client.on('message', (topic, message) => {
   let val = parseFloat(message);
-  changeValue(val, 'test');
+  changeValue(val, topic);
 });
 
 // Update HTML when message received
 const changeValue = (value, topic) => {
   const date = new Date();
 
-  switch (topic) {
-    case 'test':
-      if (data.length > 30) {
-        data.shift();
-      }
-      data.push({ x: date.toISOString(), y: value });
-      chart1.update();
-      break;
-  }
+  if (data.length > 30) data.shift();
+  data.push({ x: date.toISOString(), y: value });
+  chart1.update();
 };
